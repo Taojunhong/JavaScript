@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+</head>
+
+<body>
+    <script>
+        var price, count, money;
+        var total, change;
+        price = prompt("请输入单价：");
+        count = prompt("请输入数量：");
+        total = price * count;
+        // alert(tatol);
+        if (total >= 500) {
+            alert("消费金额超过500，您可享受8折优惠。");
+            total = total * 0.8;
+        }
+        alert("您此次一共消费：" + total / 0.8 + "元，您只需支付" + total + "元，其中优惠：" + total / 0.8 * 0.2 + "元。");
+        money = prompt("收到付款：");
+        if (money >= total) {
+            change = money - total;
+            alert("共找您" + change + "元");
+        } else {
+            change = total - money;
+            alert("您给的钱不够，请多给点。。还差" + change + "元");
+        }
+    </script>
+</body>
+
+</html>
