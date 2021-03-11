@@ -1,0 +1,29 @@
+<script type="text/javascript">
+// alert有阻塞当前页面加载的作用
+    window.alert('fast............')
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js嵌入第2种方式</title>
+</head>
+<body>
+    <!-- js嵌入第2种方式
+        不需要事件句柄
+
+    javascript脚本块在任何地方的可以，并且程序总是先执行脚本块
+    -->
+    <script type="text/javascript">
+        // alert有阻塞当前页面加载的作用
+        window.alert('hello javascript')
+    </script>
+    <input type="button" name="btn" id="1" value="按钮1">
+    <input type="button" name="btn" id="1" value="按钮2">
+</body>
+</html>
+<script type="text/javascript">
+    window.alert('last.........')
+</script>

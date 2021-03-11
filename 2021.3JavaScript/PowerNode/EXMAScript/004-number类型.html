@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004-数据类型Number</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+    "Number"数据类型包括的值：
+        整数、小数、整数、负数、不是数字、无穷大都属于Number类型
+    */
+    var v1=1;
+    var v2=3.333;
+    var v3=-200;
+    var v4=NaN;//not a number
+    var v5=Infinity;
+
+    //"number"
+    alert("1 --> "+typeof v1);
+    alert("2 --> "+typeof v2);
+    alert("3 --> "+typeof v3);
+    alert("4 --> "+typeof v4);
+    alert("5 --> "+typeof v5);
+
+
+    var a=100;
+    var b="中国人"
+    alert("6 --> "+a/b);//NaN
+
+    var e="abc";
+    var f=10;
+    alert("7 --> "+e+f)//"abc10"
+
+    //Infinity (当除数为0的时候，结果为无穷大)
+    alert("8 --> "+10/0);
+
+    alert("9 --> "+10/3);//3.33333333333
+    </script>
+</body>
+</html>

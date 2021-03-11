@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>013-关于JS代码的执行顺序1</title>
+</head>
+<body onload="ready()">
+    <script type="text/javascript">
+    /*
+        document.getElementById("btn").onclick=function(){
+            alert("自上而下的顺序");
+        }
+    */
+   function ready(){
+       alert("程序采取了load事件");
+       document.getElementById("btn").onclick=function(){
+           alert("hello JS");
+       }
+   }
+    </script>
+
+    <input type="button" value="顺序" id="btn">
+</body>
+
+</html>

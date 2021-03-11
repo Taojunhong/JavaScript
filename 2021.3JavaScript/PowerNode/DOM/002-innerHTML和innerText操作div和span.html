@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002-innerHTML和innerText操作div和span</title>
+    <style type="text/css">
+        #div1 {
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+           position: absolute;
+            margin-top: 80px;
+        }
+        #div2 {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 300px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+        innerHTML和innerText属性的区别：
+            相同点：都是设置元素内部的内容。
+            不同点：
+                innerHTML会把后面的“字符串”当做一段HTML代码执行
+                innerText只会把后面的当做普通的字符串来显示
+    */
+       
+        function f2() {
+            document.getElementById("btn2").onclick = function () {
+                document.getElementById("div2").innerText = "江西软件职业技术大学";
+            }
+        }
+        function f1() {
+            document.getElementById("btn").onclick = function () {
+                document.getElementById("div1").innerHTML = "<a href='https://www.baidu.com/'>去百度</a>";
+            }
+        }
+        window.onload = function () {
+            f1();
+            f2();
+        }
+    </script>
+    <input type="button" id="btn" value="我给你个提示">
+    <input type="button" id="btn2" value="我给你一句话">
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+
+</html>

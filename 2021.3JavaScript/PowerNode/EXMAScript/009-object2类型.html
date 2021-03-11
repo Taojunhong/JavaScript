@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>009-object类型</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+        JS中类的定义，同时又是一个构造函数的定义
+        在JS中类的定义和构造函数的定义是放在一起的
+    */
+   function User( a,b,c,d){//a,b,c表示形参
+        //声明属性（this表示当前对象）
+        //User类中有三个属性：sna,sage,sno
+       this.sna=a;
+       this.sage=b;
+       this.sno=c;
+       this.sex=d;
+   }
+
+   var v1=new User("jack",20,10086,"男");
+   //访问对象的属性：
+   alert("学号："+v1.sno);
+   alert("姓名："+v1.sna);
+   alert("年龄："+v1.sage);
+   alert("性别："+v1.sex);
+
+   var v2=new User("luse",18,10010,"女");
+   //访问对象的属性：
+   alert("学号："+v2.sno);
+   alert("姓名："+v2.sna);
+   alert("年龄："+v2.sage);
+   alert("性别："+v2.sex);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001-获取文本框的value</title>
+    </style>
+</head>
+
+<body>
+    <!-- 
+        1、JavaScript包括三大块：
+            ECMAScript：JS的核心语法（ES规范）
+            DOM：Docement Object Mobel (文档对象模型，对网页中的节点增删改查的过程)
+                var dome=document.getElementById("id");
+            BOM：Browser Object Mobel （浏览器对象模型）
+                关闭浏览器窗口，打开一个新的浏览器窗口、后退、前进、浏览器地址栏上的地址，这些都是BOM编程
+
+        2、DOM和BOM的区别和联系：
+            BOM的顶级对象是:window
+            DOM的顶级对象是：docement
+            BOM实际上是包括DOM 
+    -->
+
+    <script type="text/javascript">
+        /*
+        window.onload=function(){
+            var btnElt=window.document.getElementById("btn");
+            alert(btnElt);//object HTMLInputElement]
+        }
+        */
+        function j1() {
+            document.getElementById("btn1").onclick = function () {
+                var v=document.getElementById("text1").value ;
+                alert(v);
+                document.getElementById("text1").value = "Often is China";
+            }
+        }
+        function j2() {
+            document.getElementById("btn2").onclick = function () {
+                document.getElementById("username2").value = document.getElementById("username1").value;
+                // document.getElementById("username1").value = null;
+            }
+        }
+        window.onload = function () {
+            j1();
+            j2();
+        }
+    </script>
+
+    <!-- <input type="button" value="hello" id="btn"> -->
+    <input type="text" id="text1">
+    <input type="button" id="btn1" value="获取文本框的内容">
+    <br><br>
+    <input type="text" id="username1">
+    <input type="text" id="username2">
+    <input type="button" id="btn2" value="复制第一个文本框内容">
+    <br><br>
+    <!-- blur事件，失去焦点事件 -->
+    <input type="text" id="" onblur="alert(this.value)">
+
+
+
+</body>
+
+</html>

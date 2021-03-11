@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>005-表单验证</title>
+    <style type="text/css">
+        .div1 {
+            position: relative;
+            width: 380px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            font-family: "楷体";
+            background-image: linear-gradient(to top left, rgb(247, 181, 60), rgb(106, 245, 106));
+            box-shadow: 7px 7px 4px rgb(121, 240, 121);
+        }
+
+        h1 {
+            position: relative;
+            top: 125px;
+            left: 68px;
+        }
+
+        #username,
+        #password {
+            box-sizing: border-box;
+            width: 260px;
+            height: 38px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #B3D452;
+            border-radius: 5px;
+            font-family: "楷体";
+            box-shadow: 0 0 4px #BAD050;
+        }
+
+        #username {
+            position: absolute;
+            top: 195px;
+            left: 60px;
+        }
+
+        #usernameErr,
+        #passwordErr {
+            display: block;
+            color: red;
+            font-size: 14px;
+            width: 160px;
+            height: 25px;
+            /* background-color: aqua; */
+            text-align: right;
+        }
+
+        #password {
+            position: absolute;
+            top: 270px;
+            left: 60px;
+        }
+
+        #usernameErr {
+            position: absolute;
+            top: 238px;
+            right: 60px;
+        }
+
+        #passwordErr {
+            position: absolute;
+            top: 313px;
+            right: 60px;
+        }
+
+        #btn {
+            color: rgb(48, 150, 240);
+            font-size: 24px;
+            font-family: "楷体";
+            width: 260px;
+            height: 38px;
+            background-image: linear-gradient(to top left, rgb(247, 181, 60), rgb(106, 245, 106));
+            position: absolute;
+            top: 380px;
+            left: 62px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //自己写一个trim()方法
+        String.prototype.trim = function () {
+            return this.replace(/^\s+/, "").replace(/\s+$/, "");
+        }
+        window.onload = function () {
+            //获得username元素
+            var usernameElt = document.getElementById("username");
+            //获得usernameErr元素
+            var usernameErrElt = document.getElementById("usernameErr");
+
+            //给username绑定focus事件
+            usernameElt.onfocus = function () {
+                 //判断清除“用户名”这三个字
+                 if (usernameElt.value == "用户名") {
+                    usernameElt.value = "";
+                    usernameErrElt.innerText = "请输入手机号"
+                }
+            }
+
+            //给username绑定blur事件
+            usernameElt.onblur = function () {
+                //获取username的value
+                var user=usernameElt.value;
+                 //清除空格
+                var usernameEltTrimValue = user.trim();
+                //测试
+                // alert("-->"+usernameEltTrimValue+"<---");
+                var userRegular=/^1[3|4|5|7|8][0-9]{9}$/;
+                var ok=userRegular.test(usernameEltTrimValue);
+                alert(ok);
+                if(ok==true){
+                    usernameErrElt.innerText="用户名正确";
+                }else{
+                    usernameErrElt.innerText="用户名有误";
+                }
+
+                //判断清除“用户名”这三个字
+                if (usernameElt.value == "") {
+                    usernameElt.value = "用户名";
+                    usernameErrElt.innerText = ""
+                }
+            }
+
+        }
+    </script>
+
+    <div class="div1">
+        <h1>用户名密码登录</h1>
+        <form action="">
+            <input type="text" id="username" value="用户名"><br>
+            <span id="usernameErr"></span>
+            <input type="text" id="password" value="密码"><br>
+            <span id="passwordErr"></span>
+            <input type="button" id="btn" value="登录">
+        </form>
+    </div>
+
+</body>
+
+</html>

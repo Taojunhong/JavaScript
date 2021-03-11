@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>002-数据类型</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    /*
+        typeof 运算符的语法格式：
+            typeof 变量名
+        typeof运算符的运算结果是以下6个字符串之一：
+            “undefined”
+            "number"
+            "string"
+            "boolean"
+            "object"
+            "function"
+    */
+        function sum(a, b) {
+            if (typeof a == "number" && typeof b=="number") {
+                return a + b;
+            }
+            alert("one -->  "+a + "," + b + "必须都是数字");
+        }
+
+        var retvalue = sum("asdf", 88);
+        alert("two -->  "+retvalue);
+
+        var retvalue2=sum(10,20);
+        alert("three -->  "+retvalue2)
+
+    </script>
+</body>
+
+</html>

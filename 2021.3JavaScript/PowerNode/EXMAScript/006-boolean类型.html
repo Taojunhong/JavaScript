@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>006-数据类型boolean</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+        1、boolean类型永远只有2个值：true 和 false
+        2、在boolean类型中有一个函数叫做：Boolean();
+            语法格式：
+                Boolean(数据);
+            Boolean()函数的作用是将非布尔类型转换成布尔类型
+    */
+   var username="john";
+   if(username){
+        alert("欢迎您"+username);
+   }else{
+        alert("用户名不能为空...")
+   }
+
+   var password;
+   alert(Boolean(password));
+   
+   //"有"就是true，没有就是false
+   alert(Boolean(0));//false
+   alert(Boolean(1));//true
+   alert(Boolean(""));//false
+   alert(Boolean("ad"));//true
+   alert(Boolean(null));//false
+   alert(Boolean(NaN));//false
+   alert(Boolean(undefined));//false
+   alert(Boolean(Infinity));//true
+
+   alert("for循环：")
+   for(var i=0;i<10;i++){
+       alert("i="+i);
+   }
+    </script>
+</body>
+</html>

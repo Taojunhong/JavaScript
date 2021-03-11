@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>005-数据类型function</title>
+</head>
+
+<body>
+    <!-- 
+        关于isNaN函数：
+        用法：
+            isNaN(数据),结果是true表示不是一个数字，结果是false表示是一个数字
+        isNaN：is Not a Number
+
+        关于函数还有：
+        1、parseInt()函数
+        2、parseFloat()函数
+        3、Math.ceil()函数，作用是向上取整
+     -->
+    <script type="text/javascript">
+    function sum(a,b){
+        if(isNaN(a)||isNaN(b)){
+            alert("参与运算的必须是数字!");
+            return;
+        }
+        return a+b;
+    }
+
+    var retvalues=sum("1 ---> "+undefined,20);
+    alert(retvalues);
+
+    alert(sum(200,300));
+
+    //parseInt()函数
+    alert(parseInt("3.66666"));
+    alert(parseInt(3.66666));
+
+    //parseFloat()函数
+    alert(parseFloat("3.1414926")-1);
+    alert(parseFloat("3.1414926")+1);
+
+    //Math.ceil()函数
+    alert(Math.ceil("3.3"))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+    function f1(){
+        document.getElementById("s1").onclick=function(){
+            document.getElementById("t1").value="老师";
+            document.getElementById("t2").value="学生";
+        }
+    }
+    function f2(){
+        document.getElementById("s2").onclick=function(){
+            document.getElementById("t4").value=document.getElementById("t3").value;
+        }
+    }
+
+    window.onload = function(){
+        f1();
+        f2();
+    }
+
+    </script>
+
+    <input type="text" id="t1">
+    <input type="text" id="t2">
+    <input type="button" value="单击" id="s1"><br><br>
+    <input type="text" id="t3">
+    <input type="text" id="t4">
+    <input type="button" value="单击" id="s2">
+</body>
+</html>

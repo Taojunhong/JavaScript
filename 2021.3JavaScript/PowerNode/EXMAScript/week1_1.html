@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js嵌入第1种方式</title>
+    <style type="text/css">
+    button{
+        width: 80px;
+        height: 40px;
+    }
+    </style>
+</head>
+<body>
+    <!-- js嵌入第1种方式
+        click 单击事件
+        onclick 事件句柄
+    -->
+    <button onclick="alert('hello js')">单击1</button>
+    <button onclick="window.alert('hello')">单击2</button>
+    <button onclick="alert('hello js'),alert('hello jscode'),alert('hello jsssss')">单击3</button>
+    <input type="button" name="" id="" value="单击" onclick="alert('hello world!')
+                                                            alert('hello world!')
+                                                            alert('hello world!')
+                                                            alert('hello world!')">
+</body>
+</html>

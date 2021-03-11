@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>010-object3类型</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+
+    */
+
+    Product=function(pno,pname,price){
+        this.pno=pno;
+        this.pname=pname;
+        this.price=price;
+        this.getprice=function(){
+            return this.price;
+        }
+    }
+
+    var pro=new Product(101,"香梨",18);
+    var pri=pro.getprice();
+    alert(pri);
+
+    //可以通过prototype这个属性来给类动态扩展属性以及函数
+    //扩展getpname()函数
+    Product.prototype.getpname=function(){
+        return this.pname;
+    }
+
+    //扩展getpno()函数
+    Product.prototype.getpno=function(){
+        return this.pno;
+    }     
+
+    //调用扩展函数
+    var pna=pro.getpname();
+    var pno=pro.getpno();
+    alert(pna);
+    alert(pno);
+
+
+
+    //给String扩展一个函数
+    String.prototype.alertt=function(){
+     alert("这个狗日的傻逼键盘");
+    }
+
+    "jianpan".alertt();
+
+    var jian=new String();
+    jian.alertt();
+
+    
+    </script>
+</body>
+</html>

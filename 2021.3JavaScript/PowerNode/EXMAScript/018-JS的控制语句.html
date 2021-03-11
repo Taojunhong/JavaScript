@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>018-JS的控制语句</title>
+</head>
+<body>
+
+    <script type="text/javaScript">
+       /*
+    1、if
+    2、 switch
+    3、 while
+    4、do .. while. .
+    5、for循环
+    6、break
+    7、continue
+
+    8、for ..in语句（了解)
+    9、with语句（了解)
+
+    */
+    //创建JS数组
+    var arr=[123,3.14,false,true,"asfg"];
+    //遍历数组
+    for(var i=0;i<arr.length;i++){
+        alert(arr[i]);
+    }
+
+
+    //for..in
+    //for..in还可以遍历对象的属性
+    for(var i in arr){
+        alert("下标为："+i);
+        alert("对应数据为："+arr[i]);
+        alert(typeof(arr[i]));
+    }
+
+    User=function(username,userage) {
+        this.username=username;
+        this.userage=userage;
+    }
+
+    //第一种定义类的方式
+    //  User=function(username,userage) {}
+
+    //第二种定义类的方式
+    // function User(username,userage) {}
+    var u=new User("zhangsan",18)
+    alert(u.username);
+    alert(u.username+"  数据类型为："+typeof u.username);
+    alert(u.userage);
+    alert(u.userage+"  数据类型为："+typeof u.userage);
+
+    //使用for..in方法
+    for(var blm in u){
+        alert(typeof blm);//属性为字符串
+        alert("数据类型为："+typeof u.userage);
+    }
+    </script>
+</body>
+</html>
